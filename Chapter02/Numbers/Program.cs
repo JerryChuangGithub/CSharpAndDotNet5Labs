@@ -6,7 +6,13 @@ namespace Numbers
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            uint natureNumber = 23;
+
+            int integerNumber = 23;
+
+            float realNumber = 2.3F;
+
+            double anotherRealNumber = 2.3;
         }
     }
 }
