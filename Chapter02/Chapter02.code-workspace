@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "Basics"
+		},
+		{
+			"path": "Variables"
 		}
 	],
 	"settings": {}
