@@ -33,6 +33,11 @@ namespace Variables
             // StreamWriter file2 = File.CreateText(@"C:\something.txt");
 
             XmlDocument xml3 = new(); // target-typed new in C# 9
+
+            Console.WriteLine($"default(int) = {default(int)}");
+            Console.WriteLine($"default(bool) = {default(bool)}");
+            Console.WriteLine($"default(DateTime) = {default(DateTime)}");
+            Console.WriteLine($"default(string) = {default(string)}");
         }
     }
 }
