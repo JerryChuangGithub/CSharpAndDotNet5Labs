@@ -31,6 +31,8 @@ namespace Variables
             // the second statement
             // var file1 = File.CreateText(@"C:\something.txt");
             // StreamWriter file2 = File.CreateText(@"C:\something.txt");
+
+            XmlDocument xml3 = new(); // target-typed new in C# 9
         }
     }
 }
