@@ -40,6 +40,14 @@ namespace Formatting
               format: "{0,-8} {1,6:N0}",
               arg0: bananasText,
               arg1: bananasCount);
+
+            // Getting text input from the user
+            Console.Write("Type your first name and press ENTER: ");
+            string firstName = Console.ReadLine();
+            Console.Write("Type your age and press ENTER: ");
+            string age = Console.ReadLine();
+            Console.WriteLine(
+              $"Hello {firstName}, you look good for {age}.");
         }
     }
 }
