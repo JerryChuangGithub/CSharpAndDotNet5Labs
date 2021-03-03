@@ -19,6 +19,9 @@ namespace Formatting
               arg0: numberOfApples,
               arg1: pricePerApple * numberOfApples);
             //WriteToFile(formatted); // writes the string into a file
+
+            // interpolated strings.
+            Console.WriteLine($"{numberOfApples} apples costs {pricePerApple * numberOfApples:C}");
         }
     }
 }
