@@ -29,7 +29,15 @@ namespace Arguments
               enumType: typeof(ConsoleColor),
               value: args[1],
               ignoreCase: true);
-            CursorSize = int.Parse(args[2]);
+            try
+            {
+                // Handling platforms that do not support an API
+                CursorSize = int.Parse(args[2]);
+            }
+            catch (System.Exception)
+            {
+                WriteLine("The current platform does not support changing the size of the cursor.");
+            }
         }
     }
 }
