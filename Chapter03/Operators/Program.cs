@@ -28,6 +28,13 @@ namespace Operators
             double g = 11.0;
             WriteLine($"g is {g:N1}, f is {f}");
             WriteLine($"g / f = {g / f}");
+
+            // Assignment operators
+            int p = 6;
+            p += 3; // equivalent to p = p + 3;
+            p -= 3; // equivalent to p = p - 3;
+            p *= 3; // equivalent to p = p * 3;
+            p /= 3; // equivalent to p = p / 3;
         }
     }
 }
