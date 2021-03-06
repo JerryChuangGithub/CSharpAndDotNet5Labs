@@ -21,6 +21,16 @@ namespace BitwiseAndShiftOperators
             WriteLine($"a * 8 = {a * 8}");
             // 0000 0011 right-shift b by one bit column
             WriteLine($"b >> 1 = {b >> 1}");
+
+            // Miscellaneous operators
+            int age = 47;
+            // How many operators in the following statement?
+            char firstDigit = age.ToString()[0];
+            // There are four operators:
+            // = is the assignment operator
+            // . is the member access operator
+            // () is the invocation operator
+            // [] is the indexer access operator
         }
     }
 }
