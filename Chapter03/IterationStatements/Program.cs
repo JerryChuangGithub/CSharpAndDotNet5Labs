@@ -1,4 +1,5 @@
-﻿using static System.Console;
+﻿using System.Collections;
+using static System.Console;
 
 namespace IterationStatements
 {
@@ -34,6 +35,14 @@ namespace IterationStatements
             string[] names = { "Adam", "Barry", "Charlie" };
             foreach (string name in names)
             {
+                WriteLine($"{name} has {name.Length} characters.");
+            }
+
+            // Understanding how foreach works internally
+            IEnumerator e = names.GetEnumerator();
+            while (e.MoveNext())
+            {
+                string name = (string)e.Current; // Current is read-only!
                 WriteLine($"{name} has {name.Length} characters.");
             }
         }
