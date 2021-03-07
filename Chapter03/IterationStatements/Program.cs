@@ -23,6 +23,12 @@ namespace IterationStatements
             }
             while (password != "Pa$$w0rd");
             WriteLine("Correct!");
+
+            // Looping with the for statement
+            for (int y = 0; y <= 10; y++)
+            {
+                WriteLine(y);
+            }
         }
     }
 }
