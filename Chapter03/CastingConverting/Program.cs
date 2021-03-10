@@ -1,4 +1,5 @@
-﻿using static System.Console;
+﻿using System;
+using static System.Console;
 using static System.Convert;
 
 namespace CastingConverting
@@ -38,6 +39,16 @@ namespace CastingConverting
             foreach (double n in doubles)
             {
                 WriteLine($"ToInt({n}) is {ToInt32(n)}");
+            }
+
+            // Taking control of rounding rules
+            foreach (double n in doubles)
+            {
+                WriteLine(format:
+                  "Math.Round({0}, 0, MidpointRounding.AwayFromZero) is {1}",
+                  arg0: n,
+                  arg1: Math.Round(value: n, digits: 0,
+                          mode: MidpointRounding.AwayFromZero));
             }
         }
     }
