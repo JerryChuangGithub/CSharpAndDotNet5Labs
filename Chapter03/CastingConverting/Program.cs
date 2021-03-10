@@ -50,6 +50,16 @@ namespace CastingConverting
                   arg1: Math.Round(value: n, digits: 0,
                           mode: MidpointRounding.AwayFromZero));
             }
+
+            // Converting from any type to a string
+            int number = 12;
+            WriteLine(number.ToString());
+            bool boolean = true;
+            WriteLine(boolean.ToString());
+            DateTime now = DateTime.Now;
+            WriteLine(now.ToString());
+            object me = new object();
+            WriteLine(me.ToString());
         }
     }
 }
