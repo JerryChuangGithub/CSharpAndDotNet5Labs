@@ -31,6 +31,14 @@ namespace CastingConverting
             double g = 9.8;
             int h = ToInt32(g);
             WriteLine($"g is {g} and h is {h}");
+
+            // Rounding numbers
+            double[] doubles = new[]
+                { 9.49, 9.5, 9.51, 10.49, 10.5, 10.51 };
+            foreach (double n in doubles)
+            {
+                WriteLine($"ToInt({n}) is {ToInt32(n)}");
+            }
         }
     }
 }
