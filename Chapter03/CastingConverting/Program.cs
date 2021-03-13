@@ -60,6 +60,21 @@ namespace CastingConverting
             WriteLine(now.ToString());
             object me = new object();
             WriteLine(me.ToString());
+
+            // Converting from a binary object to a string
+            // allocate array of 128 bytes 
+            byte[] binaryObject = new byte[128];
+            // populate array with random bytes 
+            (new Random()).NextBytes(binaryObject);
+            WriteLine("Binary Object as bytes:");
+            for (int index = 0; index < binaryObject.Length; index++)
+            {
+                Write($"{binaryObject[index]:X} ");
+            }
+            WriteLine();
+            // convert to Base64 string and output as text
+            string encoded = Convert.ToBase64String(binaryObject);
+            WriteLine($"Binary Object as Base64: {encoded}");
         }
     }
 }
