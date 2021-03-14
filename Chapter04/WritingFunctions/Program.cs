@@ -1,4 +1,5 @@
-﻿using static System.Console;
+﻿using System;
+using static System.Console;
 namespace WritingFunctions
 {
     class Program
@@ -87,13 +88,77 @@ namespace WritingFunctions
                 WriteLine("You did not enter a valid amount!");
             }
         }
+        static string CardinalToOrdinal(int number)
+        {
+            switch (number)
+            {
+                case 11: // special cases for 11th to 13th
+                case 12:
+                case 13:
+                    return $"{number}th";
+                default:
+                    int lastDigit = number % 10;
+                    string suffix = lastDigit switch
+                    {
+                        1 => "st",
+                        2 => "nd",
+                        3 => "rd",
+                        _ => "th"
+                    };
+                    return $"{number}{suffix}";
+            }
+        }
+        static void RunCardinalToOrdinal()
+        {
+            for (int number = 1; number <= 40; number++)
+            {
+                Write($"{CardinalToOrdinal(number)} ");
+            }
+            WriteLine();
+        }
+        static int Factorial(int number)
+        {
+            if (number < 1)
+            {
+                return 0;
+            }
+            else if (number == 1)
+            {
+                return 1;
+            }
+            else
+            {
+                checked
+                {
+                    return number * Factorial(number - 1);
+                }
+            }
+        }
+        static void RunFactorial()
+        {
+            for (int i = 1; i < 15; i++)
+            {
+                try
+                {
+                    WriteLine($"{i}! = {Factorial(i):N0}");
+                }
+                catch (OverflowException)
+                {
+                    WriteLine($"{i}! is too big for a 32-bit interger.");
+                }
+            }
+        }
         static void Main(string[] args)
         {
             // Writing a times table function
             // RunTimesTable();
 
             // Writing a function that returns a value
-            RunCalculateTax();
+            // RunCalculateTax();
+
+            // Writing mathematical functions
+            // RunCardinalToOrdinal();
+            RunFactorial();
         }
     }
 }
