@@ -19,6 +19,6 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CalculatorLib\CalculatorLib.csproj" /> 
+    <ProjectReference Include="../CalculatorLib/CalculatorLib.csproj" /> 
   </ItemGroup>
 </Project>
