@@ -27,6 +27,14 @@ namespace PeopleApp
                 arg2: bob.FavoriteAncientWonder.ToString()
                 );
 
+            bob.Children.Add(new Person { Name = "Alfred" });
+            bob.Children.Add(new Person { Name = "Zoe" });
+            WriteLine($"{bob.Name} has {bob.Children.Count} children:");
+            foreach (var child in bob.Children)
+            {
+                WriteLine($" {child.Name}");
+            }
+
             var alice = new Person
             {
                 Name = "Alice Jones",
