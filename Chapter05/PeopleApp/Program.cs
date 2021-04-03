@@ -42,6 +42,23 @@ namespace PeopleApp
             bob.WriteToConsole();
             WriteLine(bob.GetOrigin());
 
+            (string, int)fruit = bob.GetFruit();
+            WriteLine($"{fruit.Item1}, {fruit.Item2} there are.");
+
+            // Naming the fields of a tuple
+            var fruitNamed = bob.GetNamedFruit();
+            WriteLine($"There are {fruitNamed.Number} {fruitNamed.Name}.");
+
+            // inferring tuple names
+            var thing1 = ("Neville", 4);
+            WriteLine($"{thing1.Item1} has {thing1.Item2} children.");
+            var thing2 = (bob.Name, bob.Children.Count);
+            WriteLine($"{thing2.Name} has {thing2.Count} children.");
+
+            // Deconstructing tuples
+            (string fruitName, int fruitNumber) = bob.GetFruit();
+            WriteLine($"Deconstructed: {fruitName}, {fruitNumber}");
+
             var alice = new Person
             {
                 Name = "Alice Jones",
