@@ -64,6 +64,12 @@ namespace PeopleApp
             WriteLine(bob.SayHello());
             WriteLine(bob.SayHello("Emily"));
 
+            // Passing optional parameters and naming arguments
+            WriteLine(bob.OptionalParameters());
+            WriteLine(bob.OptionalParameters("Jump!", 98.5));
+            WriteLine(bob.OptionalParameters(number: 52.7, command: "Hide!"));
+            WriteLine(bob.OptionalParameters("Poke!", active: false));
+
             var alice = new Person
             {
                 Name = "Alice Jones",
