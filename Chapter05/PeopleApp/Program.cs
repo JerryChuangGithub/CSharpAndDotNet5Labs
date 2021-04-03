@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Security.Cryptography.X509Certificates;
+using System;
 using Packt.Shared;
 using static System.Console;
 
@@ -58,6 +59,10 @@ namespace PeopleApp
             // Deconstructing tuples
             (string fruitName, int fruitNumber) = bob.GetFruit();
             WriteLine($"Deconstructed: {fruitName}, {fruitNumber}");
+
+            // Defining and passing parameters to methods
+            WriteLine(bob.SayHello());
+            WriteLine(bob.SayHelloTo("Emily"));
 
             var alice = new Person
             {
