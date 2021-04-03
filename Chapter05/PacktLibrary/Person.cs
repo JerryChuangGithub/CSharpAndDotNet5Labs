@@ -1,4 +1,5 @@
 ﻿using System;
+using static System.Console;
 using System.Collections.Generic;
 
 namespace Packt.Shared
@@ -36,5 +37,15 @@ namespace Packt.Shared
         public readonly string HomePlanet = "Earth";
 
         public readonly DateTime Instantiated;
+
+        // methods
+        public void WriteToConsole()
+        {
+            WriteLine($"{Name} was born on a {DateOfBirth:dddd}.");
+        }
+        public string GetOrigin()
+        {
+            return $"{Name} was born on {HomePlanet}.";
+        }
     }
 }
