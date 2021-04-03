@@ -15,5 +15,8 @@ namespace Packt.Shared
 
         // constants
         public const string Species = "Homo Sapien";
+
+        // read-only fields
+        public readonly string HomePlanet = "Earth";
     }
 }
