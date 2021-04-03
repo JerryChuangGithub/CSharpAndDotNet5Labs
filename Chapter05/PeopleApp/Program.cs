@@ -62,7 +62,7 @@ namespace PeopleApp
 
             // Defining and passing parameters to methods
             WriteLine(bob.SayHello());
-            WriteLine(bob.SayHelloTo("Emily"));
+            WriteLine(bob.SayHello("Emily"));
 
             var alice = new Person
             {
