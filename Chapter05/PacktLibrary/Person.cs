@@ -12,5 +12,8 @@ namespace Packt.Shared
         public WondersOfTheAncientWorld FavoriteAncientWonder;
 
         public List<Person> Children = new List<Person>();
+
+        // constants
+        public const string Species = "Homo Sapien";
     }
 }

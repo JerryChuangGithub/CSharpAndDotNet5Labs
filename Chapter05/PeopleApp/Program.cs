@@ -35,6 +35,8 @@ namespace PeopleApp
                 WriteLine($" {child.Name}");
             }
 
+            WriteLine($"{bob.Name} is a {Person.Species}");
+
             var alice = new Person
             {
                 Name = "Alice Jones",
