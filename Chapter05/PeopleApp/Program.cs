@@ -194,6 +194,20 @@ namespace PeopleApp
             // error CS8852: Init-only property or indexer 'ImmutablePerson.FirstName' can only be assigned in an object initializer,
             // or on 'this' or 'base' in an instance constructor or an 'init' accessor.
             // jeff.FirstName = "Geoff";
+
+            // Understanding records
+            var car = new ImmutableVehicle
+            {
+                Brand = "Mazda MX-5 RF",
+                Color = "Soul Red Crystal Metallic",
+                Wheels = 4
+            };
+            // The type or namespace name 'ImmutableVehiclem' could not be found (are you missing a using directive or an assembly reference?)
+            // car = new ImmutableVehiclem();
+            var repaintedCar = car with { Color = "Polymetal Grey Metallic" };
+            WriteLine(
+                format: "Original color was {0}, new color is {1}.",
+                arg0: car.Color, arg1: repaintedCar.Color);
         }
     }
 }
