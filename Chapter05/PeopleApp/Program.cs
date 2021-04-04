@@ -184,6 +184,16 @@ namespace PeopleApp
                 };
                 WriteLine($"Flight costs {flightCost:C} for {passenger}");
             }
+
+            // Init-only properties
+            var jeff = new ImmutablePerson
+            {
+                FirstName = "Jeff",
+                LastName = "Winger"
+            };
+            // error CS8852: Init-only property or indexer 'ImmutablePerson.FirstName' can only be assigned in an object initializer,
+            // or on 'this' or 'base' in an instance constructor or an 'init' accessor.
+            // jeff.FirstName = "Geoff";
         }
     }
 }
