@@ -122,6 +122,12 @@ namespace PeopleApp
             WriteLine(sam.Greeting);
             WriteLine(sam.Age);
 
+            // Defining settable properties
+            sam.FavoriteIceCream = "Chocolate Fudge";
+            WriteLine($"Sam's favorite ice-cream flavor is {sam.FavoriteIceCream}.");
+            sam.FavoritePrimaryColor = "Red";
+            WriteLine($"Sam's favorite primary color is {sam.FavoritePrimaryColor}.");
+
             BankAccount.InterestRate = 0.012M; // store a shared value
             var jonesAccount = new BankAccount();
             jonesAccount.AccountName = "Mrs. Jones";
