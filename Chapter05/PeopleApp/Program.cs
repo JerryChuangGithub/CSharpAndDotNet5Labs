@@ -111,6 +111,17 @@ namespace PeopleApp
                 arg1: gunny.HomePlanet,
                 arg2: gunny.Instantiated);
 
+            // Defining read-only properties
+            var sam = new Person
+            {
+                Name = "Sam",
+                DateOfBirth = new DateTime(1972, 1, 27)
+            };
+
+            WriteLine(sam.Origin);
+            WriteLine(sam.Greeting);
+            WriteLine(sam.Age);
+
             BankAccount.InterestRate = 0.012M; // store a shared value
             var jonesAccount = new BankAccount();
             jonesAccount.AccountName = "Mrs. Jones";
