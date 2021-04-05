@@ -7,15 +7,21 @@ namespace Packt.Shared
     public class Person
     {
         // fields 
-        public string Name; 
+        public string Name;
 
-        public DateTime DateOfBirth; 
+        public DateTime DateOfBirth;
 
-        public List<Person> Children = new List<Person>(); 
+        public List<Person> Children = new List<Person>();
+
+        // event delegate field
+        public EventHandler Shout;
+
+        // data field 
+        public int AngerLevel;
 
         // methods 
-        public void WriteToConsole() 
-        { 
+        public void WriteToConsole()
+        {
             WriteLine($"{Name} was born on a {DateOfBirth:dddd}.");
         }
 
@@ -59,6 +65,21 @@ namespace Packt.Shared
         public Person ProcreateWith(Person partner)
         {
             return Procreate(this, partner);
+        }
+
+        // method 
+        public void Poke()
+        {
+            AngerLevel++;
+            if (AngerLevel >= 3)
+            {
+                // if something is listening... 
+                if (Shout != null)
+                {
+                    // ...then call the delegate
+                    Shout(this, EventArgs.Empty);
+                }
+            }
         }
     }
 }
