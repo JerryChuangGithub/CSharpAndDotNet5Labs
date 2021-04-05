@@ -38,6 +38,23 @@ namespace Packt.Shared
             return baby;
         }
 
+        // method with a local function 
+        public static int Factorial(int number)
+        {
+            if (number < 0)
+            {
+                throw new ArgumentException(
+                  $"{nameof(number)} cannot be less than zero.");
+            }
+            return localFactorial(number);
+
+            int localFactorial(int localNumber) // local function
+            {
+                if (localNumber < 1) return 1;
+                return localNumber * localFactorial(localNumber - 1);
+            }
+        }
+
         // instance method to "multiply" 
         public Person ProcreateWith(Person partner)
         {

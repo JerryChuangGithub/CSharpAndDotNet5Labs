@@ -28,6 +28,9 @@ namespace PeopleApp
                 format: "{0}'s first child is named \"{1}\".",
                 arg0: harry.Name,
                 arg1: harry.Children[0].Name);
+
+            // Implementing functionality using local functions
+            WriteLine($"5! is {Person.Factorial(5)}");
         }
     }
 }
