@@ -33,7 +33,7 @@ namespace PeopleApp
             WriteLine($"5! is {Person.Factorial(5)}");
 
             // Defining and handling delegates
-            harry.Shout = Harry_Shout;
+            harry.Shout += Harry_Shout;
             harry.Poke();
             harry.Poke();
             harry.Poke();

@@ -14,7 +14,8 @@ namespace Packt.Shared
         public List<Person> Children = new List<Person>();
 
         // event delegate field
-        public EventHandler Shout;
+        // Defining and handling events
+        public event EventHandler Shout;
 
         // data field 
         public int AngerLevel;
