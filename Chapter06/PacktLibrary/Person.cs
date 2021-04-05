@@ -19,6 +19,12 @@ namespace Packt.Shared
             WriteLine($"{Name} was born on a {DateOfBirth:dddd}.");
         }
 
+        // operator to "multiply"
+        public static Person operator *(Person p1, Person p2)
+        {
+            return Procreate(p1, p2);
+        }
+
         // static method to "multiply" 
         public static Person Procreate(Person p1, Person p2)
         {
