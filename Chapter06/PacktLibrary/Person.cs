@@ -4,7 +4,7 @@ using static System.Console;
 
 namespace Packt.Shared
 {
-    public class Person
+    public class Person : IComparable<Person>
     {
         // fields 
         public string Name;
@@ -81,6 +81,12 @@ namespace Packt.Shared
                     Shout(this, EventArgs.Empty);
                 }
             }
+        }
+
+        // Comparing objects when sorting
+        public int CompareTo(Person person)
+        {
+            return Name.CompareTo(person.Name);
         }
     }
 }
