@@ -59,6 +59,14 @@ namespace PeopleApp
             {
                 WriteLine($"  {person.Name}");
             }
+
+            // Comparing objects using a separate class
+            WriteLine("Use PersonComparer's IComparer implementation to sort:");
+            Array.Sort(people, new PersonComparer());
+            foreach (var person in people)
+            {
+                WriteLine($"  {person.Name}");
+            }
         }
 
         private static void Harry_Shout(object sender, EventArgs e)
